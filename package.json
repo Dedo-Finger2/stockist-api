@@ -1,8 +1,8 @@
 {
-  "name": "eslint-husky-tests-template",
+  "name": "stockist-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a project to manage stocks at home",
+  "main": "src/server.ts",
   "scripts": {
     "start:dev": "tsx watch --env-file .env src/server.ts",
     "husky:prepare": "husky install",
