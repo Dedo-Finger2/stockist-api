@@ -16,7 +16,6 @@
         "semi": "error",
         "no-unused-vars": "warn",
         "quotes":"error",
-        "comma-dangle":"error",
         "comma-spacing":"error",
         "no-trailing-spaces":"error"
     }
