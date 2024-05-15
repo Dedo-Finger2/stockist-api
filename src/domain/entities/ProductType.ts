@@ -8,7 +8,7 @@ interface IProductTypeProps {
 }
 
 export class ProductType extends Entity<IProductTypeProps> {
-  constructor(props: IProductTypeProps, id?: string) {
+  private constructor(props: IProductTypeProps, id?: string) {
     super(props, id);
   }
 
