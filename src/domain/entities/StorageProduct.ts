@@ -1,23 +1,23 @@
 import { Entity } from "@/core/domain/Entity";
 
-export enum StorageProductsStatus {
+export enum StorageProductStatus {
   fine = "Fine",
   inRisk = "In-Risk",
   missing = "Missing",
   inStock = "InStock",
 }
 
-interface IStorageProductsProps {
+interface IStorageProductProps {
   storageId: string;
   productId: string;
   brandId: string;
   quantity: number;
-  status: StorageProductsStatus;
+  status: StorageProductStatus;
   createdAt?: Date;
 }
 
-export class StorageProduct extends Entity<IStorageProductsProps> {
-  private constructor(props: IStorageProductsProps, id?: string) {
+export class StorageProduct extends Entity<IStorageProductProps> {
+  private constructor(props: IStorageProductProps, id?: string) {
     super(props, id);
   }
 
@@ -29,14 +29,14 @@ export class StorageProduct extends Entity<IStorageProductsProps> {
       status,
       storageId,
       createdAt,
-    }: IStorageProductsProps,
+    }: IStorageProductProps,
     id?: string,
   ): StorageProduct {
-    const props: IStorageProductsProps = {
+    const props: IStorageProductProps = {
       brandId,
       productId,
       quantity,
-      status: status ?? StorageProductsStatus.inStock,
+      status: status ?? StorageProductStatus.inStock,
       storageId,
       createdAt,
     };
